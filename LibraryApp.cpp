@@ -40,6 +40,9 @@ int option;
        int isbn;
        cout << "Enter ISBN to borrow book: ";
        cin >> isbn;
+      if (isbn == 0){
+            continue;
+        }
 
               
            // //ask for the first operand
