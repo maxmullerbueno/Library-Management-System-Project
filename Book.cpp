@@ -28,5 +28,13 @@ void Book::getBookDetails()
 int Book::getISBN(){
     return ISBN;
 }
-
 // Set up pointer borrowBook as stated on Book.h
+void Book::borrowBook(){
+    if (availability == 1){
+        availability = 0;
+        cout << "Book borrowed successfully." << endl;
+    }
+    else{
+        cout << "This book is already borrowed." << endl;
+    }
+}
