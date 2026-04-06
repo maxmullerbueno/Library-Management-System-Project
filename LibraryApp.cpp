@@ -13,11 +13,11 @@ int main()
     Book library[5];
 
     // Initialize books
-    library[0].setBookDetails("C++ Basics", "Smith", 101);
-    library[1].setBookDetails("Data Structures", "Brown", 102);
-    library[2].setBookDetails("Algorithms", "Clark", 103);
-    library[3].setBookDetails("Networking", "Jones", 104);
-    library[4].setBookDetails("AI Intro", "Taylor", 105);
+    library[0].setBookDetails("C++ Basics", "Smith", "101");
+    library[1].setBookDetails("Data Structures", "Brown", "102");
+    library[2].setBookDetails("Algorithms", "Clark", "103");
+    library[3].setBookDetails("Networking", "Jones", "104");
+    library[4].setBookDetails("AI Intro", "Taylor", "105");
 
     int option;
 
@@ -28,8 +28,8 @@ int main()
         cout << "2.     Return Book        " << endl;
         cout << "3.   Display All Books    " << endl;
         cout << "4.         Exit           " << endl;
-        cout << "      Select option:      "; << endl;
-        cout << "=========================="; << endl;
+        cout << "      Select option:      ";
+        cout << "==========================";
         cin >> option;
 
         // Exit

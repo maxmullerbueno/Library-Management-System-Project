@@ -1,10 +1,12 @@
 #include "Book.h"
+using namespace std;
 
 Book::Book() {
     availability = 1; // book starts as available
 }
 // Set up pointer setBookDetails as stated on Book.h
-void Book::setBookDetails(string t, string a, int id){
+void Book::setBookDetails(string t, string a, string id)
+{
     title = t; author = a; ISBN = id; availability = 1;
 }
 // Set up pointer getBookDetails as stated on Book.h
@@ -21,9 +23,9 @@ void Book::displayBookDetails(){
     }
     cout << "---------------------" << endl;
 }
-// Set up getISBN and add a return ISBN.
+// Set up getISBN and add an int ISBN.
 int Book::getISBN(){
-    return ISBN;
+    int ISBN;
 }
 // Set up pointer borrowBook as stated on Book.h
 void Book::borrowBook(){
