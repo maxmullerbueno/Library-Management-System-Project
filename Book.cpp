@@ -8,7 +8,7 @@ void Book::setBookDetails(string t, string a, int id){
     title = t; author = a; ISBN = id; availability = 1;
 }
 // Set up pointer getBookDetails as stated on Book.h
-void Book::getBookDetails(){
+void Book::displayBookDetails(){
     cout << "Title: " << endl;
     cout << "Author: " << endl;
     cout << "ISBN: " << endl;

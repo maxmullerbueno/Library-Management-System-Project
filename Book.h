@@ -13,7 +13,7 @@ public:
 // void as a pointer
     Book();
     void setBookDetails(string t, string a, string id); 
-    void getBookDetails();
+    void displayBookDetails();
     int getISBN();
     void borrowBook();
     void returnBook();
