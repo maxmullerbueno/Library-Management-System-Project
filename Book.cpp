@@ -11,4 +11,4 @@ void Book::setBookDetails(string t, string a, int id){
     availability = 1;
 }
 // Set up pointer getBookDetails as stated on Book.h
-void Book::displayBookDetails()
+void Book::getBookDetails()
