@@ -28,21 +28,11 @@ int option;
         cout << "=3.        Exit          =" << endl;
         cout << "=    Select 1, 2 or 3    =" << endl;
         cin >> option;
+        cout << "You have selected the Option: " << option << endl;
 
-        
 
-    // ------------------------- CONTINUE -----------------------------
-    
-      //  cout << "=      1 Add     =" << endl;
-      //  cout << "=   2 Subtract   =" << endl;
-      //  cout << "=   3 Multiply   =" << endl;
-      //  cout << "=    4 Divide    =" << endl;
-      //  cout << "=     5 Exit     =" << endl;
-      //  cout << "==================" << endl;
-      //  cout << "= Select an Option (1-5): =" << endl;
-      //  cin >> option;
-        //cout << " You have selected the Option: " << option << endl;
-        // Exit option
+
+      // Exit option
       //  if (option == 5) {
        //     break;
        //     cout << "ABC" << endl; //Dead code
