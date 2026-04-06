@@ -12,3 +12,21 @@ void Book::setBookDetails(string t, string a, int id){
 }
 // Set up pointer getBookDetails as stated on Book.h
 void Book::getBookDetails()
+    cout << "Title: " << endl;
+    cout << "Author: " << endl;
+    cout << "ISBN: " << endl;
+
+    if (availability == 1){
+        cout << "Available: Yes" << endl;
+    }
+    else{
+        cout << "Available: No" << endl;
+    }
+    cout << "---------------------" << endl;
+}
+// Set up getISBN and add a return ISBN.
+int Book::getISBN(){
+    return ISBN;
+}
+
+// Set up pointer borrowBook as stated on Book.h
