@@ -21,8 +21,15 @@ Book library[5];
 
 int option;
   while (true){
-        cout << "==========================" <<
-        cout << "=      Menu      =" << endl;
+        cout << "==========================" << endl;
+        cout << "=          Menu          =" << endl;
+        cout << "=1.     Borrow Book      =" << endl;
+        cout << "=2.     Return Book      =" << endl;
+        cout << "=3.        Exit          =" << endl;
+        cout << "=    Select 1, 2 or 3    =" << endl;
+        cin >> option;
+
+        
 
     // ------------------------- CONTINUE -----------------------------
     
