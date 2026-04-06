@@ -52,8 +52,38 @@ int option;
         found = true;
          }
        }
+         if (found == false)            {
+            cout << "Book not found." << endl;
+            }
+        }
 
-              
+       // This is for borrowing a book
+      if (option == 2) {
+       int isbn;
+       cout << "Enter ISBN to return book: ";
+       cin >> isbn;
+      if (isbn == 0){
+            continue;
+        }
+      bool found = false;
+
+     // Set for loop     
+     for (int i = 0; i < 3; i++){
+      if (library[i].getISBN() == isbn){
+        library[i].returnBook();
+        found = true;
+         }
+       }
+         if (found == false)            {
+            cout << "Book not found." << endl;
+            }
+        }
+
+
+
+
+
+      
            // //ask for the first operand
        //     cout << "input the 1st number: ";
         //    cin >> number1;
