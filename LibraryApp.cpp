@@ -3,22 +3,24 @@
 #include "Book.h"
 using namespace std;
 
-int main()
-{
+int main(){
 // Example from class to be based on:
 cout << "==========================" << endl;
 cout << "=   Library Management   =" << endl;
 cout << "==========================" << endl;
 
+// Create array of 5 books
 Book library[5];
 
+    // Add books details as title, , author and ISBN
     library[0].setBookDetails("C++ Basics", "Smith", "101");
     library[1].setBookDetails("Data Structures", "Brown", "102");
     library[2].setBookDetails("Algorithms", "Clark", "103");
     library[3].setBookDetails("Networking", "Jones", "104");
     library[4].setBookDetails("AI Intro", "Taylor", "105");
-  
-  while (true) {
+
+int option;
+  while (true){
         cout << "==========================" <<
         cout << "=      Menu      =" << endl;
 
