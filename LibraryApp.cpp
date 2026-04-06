@@ -44,6 +44,15 @@ int option;
             continue;
         }
       bool found = false;
+
+     // Set for loop     
+     for (int i = 0; i < 3; i++){
+      if (library[i].getISBN() == isbn){
+        library[i].borrowBook();
+        found = true;
+         }
+       }
+
               
            // //ask for the first operand
        //     cout << "input the 1st number: ";
