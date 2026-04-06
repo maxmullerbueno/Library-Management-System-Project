@@ -38,3 +38,8 @@ void Book::borrowBook(){
         cout << "This book is already borrowed." << endl;
     }
 }
+// Set up pointer returnBook as stated on Book.h
+void Book::returnBook(){
+    availability = 1;
+    cout << "Book returned successfully." << endl;
+}
