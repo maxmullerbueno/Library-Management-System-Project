@@ -43,7 +43,7 @@ int option;
       if (isbn == 0){
             continue;
         }
-
+      bool found = false;
               
            // //ask for the first operand
        //     cout << "input the 1st number: ";
