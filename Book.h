@@ -3,8 +3,18 @@
 using namespace std;
 
 class Book {
-public: // Public or Private? Investigate.
+private: // Put it private since is an internal information.
     string title;
     string author;
     string ISBN;
-    bool availability;
+    int availability;
+
+public:
+// void as a pointer
+    Book();
+    void setBookDetails(string t, string a, string id); 
+    void getBookDetails();
+    int getISBN();
+    void borrowBook();
+    void returnBook();
+};
