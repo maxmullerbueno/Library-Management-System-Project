@@ -30,17 +30,18 @@ int option;
         cin >> option;
         cout << "You have selected the Option: " << option << endl;
 
-
-
       // Exit option
-      //  if (option == 5) {
-       //     break;
-       //     cout << "ABC" << endl; //Dead code
-       // }
-        // Add 2 numbers
-      //  if (option == 1) {
-       //     Calculator myCalc;
-         //   int number1, number2;
+     if (option == 3){
+            break;
+        }
+
+      // This is for borrowing a book
+      if (option == 1) {
+       int isbn;
+       cout << "Enter ISBN to borrow book: ";
+       cin >> isbn;
+
+              
            // //ask for the first operand
        //     cout << "input the 1st number: ";
         //    cin >> number1;
@@ -50,6 +51,8 @@ int option;
         //    double result = myCalc.add(number1, number2);
         //    cout << "The result of adding " << number1 << " and " << number2 << " is " << result << endl;
        // }
+
+      
        // if (option == 2) {
        //     Calculator myCalc;
          //   int number1, number2;
@@ -62,6 +65,8 @@ int option;
             //double result = myCalc.subtract(number1, number2);
             //cout << "The result of adding " << number1 << " and " << number2 << " is " << result << endl;
        // }
+
+      
        // if (option == 3) {
          //   Calculator myCalc;
            // int number1, number2;
