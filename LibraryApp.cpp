@@ -109,7 +109,7 @@ int main() {
     }
     
     bubbleSort(book, MAX);
-    cout << "Books registered alphabetically in the Library: " << endl;
+    cout << "Books registered alphabetically in the Library by title: " << endl;
     cout << endl;
 
     for (int i = 0; i < MAX; i++) {
