@@ -22,7 +22,7 @@ public:
         return title;
     }
     void display() const {
-        std::cout << title << " - " << endl;
+        std::cout << title << " " << endl;
     }
     //Sorting comparison
     bool operator>(const Book& other) const {
