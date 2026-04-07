@@ -21,73 +21,74 @@ int main()
 
     int option;
 
-    while (true)    {
+    while (true) {
         cout << endl;
         cout << "========== Menu ==========" << endl;
         cout << "1.     Borrow Book        " << endl;
         cout << "2.     Return Book        " << endl;
         cout << "3.   Display All Books    " << endl;
         cout << "4.         Exit           " << endl;
-        cout << "      Select option:      ";
         cout << "==========================";
+        cout << endl;
+        cout << "      Select option:      ";
         cin >> option;
 
         // Exit
-        if (option == 4){
+        if (option == 4) {
             break;
         }
 
         // Borrow Book
-        if (option == 1){
-            int isbn;
+        if (option == 1) {
+            int ISBN;
             cout << "Enter ISBN to borrow (0 to exit): ";
-            cin >> isbn;
+            cin >> ISBN;
 
-            if (isbn == 0){
+            if (ISBN == 0) {
                 continue;
             }
 
             bool found = false;
 
-            for (int i = 0; i < 5; i++){
-                if (library[i].getISBN() == isbn){
+            for (int i = 0; i < 5; i++) {
+                if (library[i].getISBN() == ISBN) {
                     library[i].borrowBook();
                     found = true;
                 }
             }
 
-            if (found == false){
+            if (found == false) {
                 cout << "Book not found." << endl;
             }
         }
 
         // Return Book
-        if (option == 2){
-            int isbn;
+        if (option == 2) {
+            int ISBN;
             cout << "Enter ISBN to return (0 to exit): ";
-            cin >> isbn;
+            cin >> ISBN;
 
-            if (isbn == 0){
+            if (ISBN == 0) {
                 continue;
             }
 
             bool found = false;
 
-            for (int i = 0; i < 5; i++){
-                if (library[i].getISBN() == isbn){
+            for (int i = 0; i < 5; i++) {
+                if (library[i].getISBN() == ISBN) {
                     library[i].returnBook();
                     found = true;
                 }
             }
 
-            if (found == false){
+            if (found == false) {
                 cout << "Book not found." << endl;
             }
         }
 
         // Display Books
-        if (option == 3){
-            for (int i = 0; i < 5; i++){
+        if (option == 3) {
+            for (int i = 0; i < 5; i++) {
                 library[i].displayBookDetails();
             }
         }

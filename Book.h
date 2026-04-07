@@ -10,9 +10,9 @@ private: // Put it private since is an internal information.
     int availability;
 
 public:
-// void as a pointer
+    // void as a pointer
     Book();
-    void setBookDetails(string t, string a, string id); 
+    void setBookDetails(string t, string a, string id);
     void displayBookDetails();
     int getISBN();
     void borrowBook();
