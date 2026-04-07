@@ -19,8 +19,7 @@ void Book::displayBookDetails() {
        cout << "Available: Yes" << endl;  
    } else {  
        cout << "Available: No" << endl;  
-   }  
-   cout << "---------------------" << endl;  
+   }   
 }  
 // Set up getISBN and add an int ISBN.  
 int Book::getISBN() {  
