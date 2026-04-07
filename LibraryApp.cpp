@@ -4,22 +4,34 @@
 using namespace std;
 
 // Display BubbleSort according to examples by Geeks for Geeks, Stack Overflow and Medium as follows
+void bubbleSort(Book books[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (books[j] > books[j + 1]) {
+                Book temp = books[j];
+                books[j] = books[j + 1];
+                books[j + 1] = temp;
+            }
+        }
+    }
+}
 
-int main()
-{
+int main() {
+    const int MAX = 5; //Max the quantity as requested in the assessment
+
     cout << "==========================" << endl;
     cout << "     Library System       " << endl;
     cout << "==========================" << endl;
 
-    // Create array of 5 books
-    Book library[5];
+    // Create array 
+    Book book[MAX];
 
-    // Initialize books
-    library[0].setBookDetails("C++ Basics", "Smith", "101");
-    library[1].setBookDetails("Data Structures", "Brown", "102");
-    library[2].setBookDetails("Algorithms", "Clark", "103");
-    library[3].setBookDetails("Networking", "Jones", "104");
-    library[4].setBookDetails("AI Intro", "Taylor", "105");
+    // Initialize books as determined above
+    book[0].setBookDetails("C++ Basics", "Smith, Mathew", "101");
+    book[1].setBookDetails("Data Structures", "Brown, Chris", "102");
+    book[2].setBookDetails("Algorithms", "Clark, Benjamin", "103");
+    book[3].setBookDetails("Networking", "Jones, Tom", "104");
+    book[4].setBookDetails("AI Intro", "Taylor, Max", "105");
 
     int option;
 
@@ -35,15 +47,15 @@ int main()
         cout << "      Select option:      ";
         cin >> option;
 
-        // Exit
+        // Exit as class example
         if (option == 4) {
             break;
         }
 
-        // Borrow Book
+        // Borrow Book as class example
         if (option == 1) {
             int ISBN;
-            cout << "Enter ISBN to borrow (0 to exit): ";
+            cout << "Type ISBN to borrow (0 to exit): ";
             cin >> ISBN;
 
             if (ISBN == 0) {
@@ -53,8 +65,8 @@ int main()
             bool found = false;
 
             for (int i = 0; i < 5; i++) {
-                if (library[i].getISBN() == ISBN) {
-                    library[i].borrowBook();
+                if (book[i].getISBN() == ISBN) {
+                    book[i].borrowBook();
                     found = true;
                 }
             }
@@ -64,10 +76,10 @@ int main()
             }
         }
 
-        // Return Book
+        // Return Book as class example
         if (option == 2) {
             int ISBN;
-            cout << "Enter ISBN to return (0 to exit): ";
+            cout << "Type ISBN to return (0 to exit): ";
             cin >> ISBN;
 
             if (ISBN == 0) {
@@ -77,8 +89,8 @@ int main()
             bool found = false;
 
             for (int i = 0; i < 5; i++) {
-                if (library[i].getISBN() == ISBN) {
-                    library[i].returnBook();
+                if (book[i].getISBN() == ISBN) {
+                    book[i].returnBook();
                     found = true;
                 }
             }
@@ -88,14 +100,24 @@ int main()
             }
         }
 
-        // Display Books
+        // Display Books as class example
         if (option == 3) {
             for (int i = 0; i < 5; i++) {
-                library[i].displayBookDetails();
+                book[i].displayBookDetails();
             }
         }
     }
+    
+    bubbleSort(book, MAX);
+    cout << "Books registered alphabetically in the Library: " << endl;
+    cout << endl;
 
-    cout << "Program finished." << endl;
+    for (int i = 0; i < MAX; i++) {
+        book[i].display();
+    }
+
+    cout << endl;
+
+    cout << "System closed as requested, see you next time!" << endl;
     return 0;
 }

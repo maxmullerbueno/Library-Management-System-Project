@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Book {
@@ -7,7 +8,7 @@ private: // Put it private since is an internal information.
     string title;
     string author;
     string ISBN;
-    int availability;
+    bool availability;
 
 public:
     // void as a pointer
@@ -17,4 +18,14 @@ public:
     int getISBN();
     void borrowBook();
     void returnBook();
+    string getTitle() const {
+        return title;
+    }
+    void display() const {
+        std::cout << title << " - " << endl;
+    }
+    //Sorting comparison
+    bool operator>(const Book& other) const {
+        return title > other.title; //alphabetical comparison
+    }
 };
