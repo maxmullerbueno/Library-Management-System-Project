@@ -11,7 +11,7 @@ private: // Put it private since is an internal information.
     bool availability;
 
 public:
-    // void as a pointer
+    // void as a return type
     Book();
     void setBookDetails(string t, string a, string id);
     void displayBookDetails();
@@ -21,8 +21,8 @@ public:
     string getTitle() const {
         return title;
     }
-    void display() const {
-        std::cout << title << " " << endl;
+    void displayBookDetails() const {
+        cout << title << endl;
     }
     //Sorting comparison
     bool operator>(const Book& other) const {
