@@ -1,15 +1,15 @@
 #include "Book.h"  
-#include <string> // Add this include for std::stoi based on Geeks for Geeks.
+#include <string> // Added for stoi
 using namespace std;  
 
 Book::Book() {  
-   availability = 1; // book starts as available  
+   availability = true; // book starts as available  
 }  
 // Set up pointer setBookDetails as stated on Book.h  
 void Book::setBookDetails(string t, string a, string id) {  
    title = t; author = a; ISBN = id; availability = 1;  
 }  
-// Set up pointer getBookDetails as stated on Book.h  
+// Void for displayBookDetails 
 void Book::displayBookDetails() {  
    cout << "Title: " << title << endl;  
    cout << "Author: " << author << endl;  
@@ -19,13 +19,13 @@ void Book::displayBookDetails() {
        cout << "Available: Yes" << endl;  
    } else {  
        cout << "Available: No" << endl;  
-   }   
+   } 
 }  
 // Set up getISBN and add an int ISBN.  
 int Book::getISBN() {  
-   return stoi(ISBN); // Convert the string ISBN to an integer and return it  
+   return stoi(ISBN); 
 }  
-// Set up pointer borrowBook as stated on Book.h  
+//Void for borrowBook  
 void Book::borrowBook() {  
    if (availability == true) {  
        availability = false;  
@@ -34,8 +34,8 @@ void Book::borrowBook() {
        cout << "This book is already borrowed." << endl;  
    }  
 }  
-// Set up pointer returnBook as stated on Book.h  
+// Void for returnBook  
 void Book::returnBook() {  
-   availability = 1;  
+   availability = true;  
    cout << "Book returned successfully." << endl;  
 }
