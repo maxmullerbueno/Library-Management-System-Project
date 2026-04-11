@@ -41,30 +41,24 @@ int main() {
         cout << "1.     Borrow Book        " << endl;
         cout << "2.     Return Book        " << endl;
         cout << "3.   Display All Books    " << endl;
-        cout << "4.         Exit           " << endl;
+        cout << "0.         Exit           " << endl;
         cout << "==========================";
         cout << endl;
         cout << "      Select option:      ";
         cin >> option;
 
         // Exit as class example
-        if (option == 4) {
+        if (option == 0) {
             break;
         }
 
-        // Borrow Book as class example
+        //search by ISBN and borrow the book if available
         else if (option == 1) {
             int ISBN;
             cout << "Type ISBN to borrow (0 to exit): ";
             cin >> ISBN;
-
-            if (ISBN == 0) {
-                continue;
-            }
-
             bool found = false;
-
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < QTY; i++) {
                 if (books[i].getISBN() == ISBN) {
                     books[i].borrowBook();
                     found = true;
@@ -72,23 +66,17 @@ int main() {
             }
 
             if (found == false) {
-                cout << "Book not found." << endl;
+                cout << "Sorry, no book was found by this ISBN number." << endl;
             }
         }
 
-        // Return Book as class example
+        // search by ISBN and return the book to the library
         else if (option == 2) {
             int ISBN;
             cout << "Type ISBN to return (0 to exit): ";
             cin >> ISBN;
-
-            if (ISBN == 0) {
-                continue;
-            }
-
             bool found = false;
-
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < QTY; i++) {
                 if (books[i].getISBN() == ISBN) {
                     books[i].returnBook();
                     found = true;
@@ -96,24 +84,25 @@ int main() {
             }
 
             if (found == false) {
-                cout << "Sorry, no book found by this ISBN number." << endl;
+                cout << "Sorry, no book was found by this ISBN number." << endl;
             }
         }
 
-        // Display Books as class example
+        // display all books with their current availability
         else if (option == 3) {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < QTY; i++) {
                 books[i].displayBookDetails();
             }
         }
     }
     
+    // Sort and display all books alphabetically by title before closing
     bubbleSort(books, QTY);
     cout << "Books displayed alphabetically in the Library by title below: " << endl;
     cout << endl;
-
     for (int i = 0; i < QTY; i++) {
-        books[i].displayBookDetails();
+        books[i].displayBookDetails(); 
+        cout << endl;
     }
 
     cout << endl;
