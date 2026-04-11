@@ -92,6 +92,7 @@ int main() {
         else if (option == 3) {
             for (int i = 0; i < QTY; i++) {
                 books[i].displayBookDetails();
+                cout << endl;
             }
         }
     }
