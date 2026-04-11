@@ -21,9 +21,7 @@ public:
     string getTitle() const {
         return title;
     }
-    void displayBookDetails() const {
-        cout << title << endl;
-    }
+
     //Sorting comparison
     bool operator>(const Book& other) const {
         return title > other.title; //alphabetical comparison
