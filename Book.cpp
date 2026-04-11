@@ -1,15 +1,18 @@
 #include "Book.h"  
-#include <string> // Added for stoi
+#include <string> // stoi converts string ISBN to integer
 using namespace std;  
 
 Book::Book() {  
    availability = true; // book starts as available  
 }  
-// Set up pointer setBookDetails as stated on Book.h  
+// Sets the book title, author and ISBN  
 void Book::setBookDetails(string t, string a, string id) {  
-   title = t; author = a; ISBN = id; availability = 1;  
+   title = t; 
+   author = a; 
+   ISBN = id; 
+   availability = true;  
 }  
-// Void for displayBookDetails 
+
 void Book::displayBookDetails() {  
    cout << "Title: " << title << endl;  
    cout << "Author: " << author << endl;  
