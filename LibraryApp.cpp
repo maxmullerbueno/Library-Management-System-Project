@@ -90,6 +90,7 @@ int main() {
 
         // display all books with their current availability
         else if (option == 3) {
+            cout << endl;
             for (int i = 0; i < QTY; i++) {
                 books[i].displayBookDetails();
                 cout << endl;
