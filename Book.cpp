@@ -13,7 +13,8 @@ void Book::setBookDetails(string t, string a, string id) {
    availability = true;  
 }  
 
-void Book::displayBookDetails() {  
+void Book::displayBookDetails() {
+   cout << endl;
    cout << "Title: " << title << endl;  
    cout << "Author: " << author << endl;  
    cout << "ISBN: " << ISBN << endl;  
