@@ -32,7 +32,7 @@ int main() {
     books[3].setBookDetails("Networking", "Jones, Tom", "104");
     books[4].setBookDetails("AI Intro", "Taylor, Max", "105");
 
-    cout << "\n===== TEST: Correct Book Initialisation =====\n";
+    cout << "===== TEST: Correct Book Initialisation =====";
 
 for (int i = 0; i < 3; i++) {
     books[i].displayBookDetails();
