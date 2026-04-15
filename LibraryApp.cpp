@@ -32,24 +32,6 @@ int main() {
     books[3].setBookDetails("Networking", "Jones, Tom", "104");
     books[4].setBookDetails("AI Intro", "Taylor, Max", "105");
 
-    cout << "===== TEST: Correct Book Initialisation =====";
-
-for (int i = 0; i < 3; i++) {
-    books[i].displayBookDetails();
-}
-
-    cout << "===== TEST: Incorrect Book Initialisation =====";
-
-Book wrongBooks[3];
-
-wrongBooks[0].setBookDetails("", "Smith, Mathew", "101"); // Empty title
-wrongBooks[1].setBookDetails("Data Structures", "", "102"); // Empty author
-wrongBooks[2].setBookDetails("Algorithms", "Clark, Benjamin", "-5"); // Negative ISBN
-
-for (int i = 0; i < 3; i++) {
-    wrongBooks[i].displayBookDetails();
-}
-
     int option;
 
     //Display menu
